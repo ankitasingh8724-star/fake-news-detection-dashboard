@@ -71,7 +71,7 @@ The model predicts whether a news article is fake or real based on the text inpu
 ---
 
 ## Live Demo
-(Add your deployed Streamlit link here)
+https://fake-news-detection-dashboard-c28nsxdhahvzlo88p7xgxb.streamlit.app/
 
 ---
 
