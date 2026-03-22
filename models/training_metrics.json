@@ -1,0 +1,16 @@
+{
+  "accuracies": {
+    "Logistic Regression": 0.9199683042789224,
+    "Passive Aggressive": 0.9374009508716323,
+    "Random Forest": 0.9080824088748018
+  },
+  "best_model": "Passive Aggressive",
+  "best_accuracy": 0.9374009508716323,
+  "n_train": 5044,
+  "n_test": 1262,
+  "reports": {
+    "Logistic Regression": "              precision    recall  f1-score   support\n\n        Fake     0.9077    0.9350    0.9212       631\n        Real     0.9330    0.9049    0.9187       631\n\n    accuracy                         0.9200      1262\n   macro avg     0.9203    0.9200    0.9200      1262\nweighted avg     0.9203    0.9200    0.9200      1262\n",
+    "Passive Aggressive": "              precision    recall  f1-score   support\n\n        Fake     0.9381    0.9366    0.9374       631\n        Real     0.9367    0.9382    0.9375       631\n\n    accuracy                         0.9374      1262\n   macro avg     0.9374    0.9374    0.9374      1262\nweighted avg     0.9374    0.9374    0.9374      1262\n",
+    "Random Forest": "              precision    recall  f1-score   support\n\n        Fake     0.8955    0.9239    0.9095       631\n        Real     0.9214    0.8922    0.9066       631\n\n    accuracy                         0.9081      1262\n   macro avg     0.9085    0.9081    0.9081      1262\nweighted avg     0.9085    0.9081    0.9081      1262\n"
+  }
+}
