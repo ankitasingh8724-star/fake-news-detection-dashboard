@@ -1,70 +1,87 @@
 # Fake News Detection System with Dashboard
 
-Python project that classifies news articles as **Fake** or **Real** using NLP preprocessing, **TF–IDF** vectorization, and three scikit-learn models: **Logistic Regression**, **PassiveAggressiveClassifier**, and **Random Forest**. The best model (by hold-out accuracy) is saved and used in a **Streamlit** dashboard.
+## Project Overview
+The Fake News Detection System is a Machine Learning project that identifies whether a news article is **Fake** or **Real**.  
+It uses Natural Language Processing (NLP) techniques and machine learning models to analyze news text and make predictions.
 
-## Project layout
+The project also includes an interactive dashboard built using Streamlit.
 
-```
-fake-news-detection/
-├── data/              # CSV downloaded here on first training run
-├── src/
-│   ├── data_loader.py # Download + load dataset, handle missing values
-│   ├── preprocess.py  # Cleaning + English stopword removal
-│   ├── train.py       # Train models, compare, save best
-│   └── predict.py     # Load artifacts and predict
-├── models/            # Saved vectorizer, classifier, metrics JSON
-├── app.py             # Streamlit dashboard
-├── requirements.txt
-└── README.md
-```
+---
 
-## Dataset
+## Features
+- News text analysis using NLP
+- Fake vs Real news prediction
+- Interactive dashboard
+- Model accuracy comparison
+- Real-time prediction
+- Easy deployment
 
-By default, training downloads [lutzhamel/fake-news `fake_or_real_news.csv`](https://github.com/lutzhamel/fake-news/blob/master/data/fake_or_real_news.csv) into `data/fake_or_real_news.csv` (combined fake and real articles with `title`, `text`, and `label`).
+---
 
-You can place your own CSV in `data/` as `fake_or_real_news.csv` with at least:
+## Tech Stack
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- NLP
+- Streamlit
 
-- `text` — article body (required)
-- `label` — `FAKE` / `REAL` (or `0` / `1` for fake/real)
-- `title` — optional; concatenated with `text` when present
+---
 
-Rows with empty `text`, unknown labels, or duplicate combined text are dropped.
+## Machine Learning Workflow
+1. Data Collection
+2. Data Cleaning
+3. Text Preprocessing
+4. Feature Extraction (TF-IDF)
+5. Model Training
+6. Model Evaluation
+7. Deployment
 
-## Setup
+---
 
-```bash
-cd fake-news-detection
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+## Project Structure
+
+fake-news-detection/ │ ├── data/ ├── models/ ├── notebooks/ ├── src/ ├── app.py ├── requirements.txt └── README.md
+Copy code
+
+---
+
+## Installation
+
+Install dependencies:
 pip install -r requirements.txt
-```
+Copy code
 
-NLTK English stopwords are downloaded automatically on first use into `.nltk_data/` inside this project (no manual `nltk.download` step).
-
-## Train models
-
-```bash
-python -m src.train
-```
-
-This preprocesses text, fits TF–IDF, trains all three models, prints accuracy and classification reports, and writes:
-
-- `models/tfidf_vectorizer.joblib`
-- `models/best_classifier.joblib`
-- `models/training_metrics.json`
-
-## Dashboard
-
-```bash
+Run the application:
 streamlit run app.py
-```
+Copy code
 
-The app provides a text box, prediction label, class probabilities (with an approximate score for Passive Aggressive when needed), and a bar chart of each model’s test accuracy from the last training run.
+---
 
-## Requirements summary
+## Models Used
+- Logistic Regression
+- PassiveAggressiveClassifier
+- Random Forest
 
-- Python 3.10+
-- NLP preprocessing and stopword removal (NLTK)
-- TF–IDF vectorization
-- Model training, comparison, accuracy evaluation, best-model persistence
-- Streamlit UI with prediction and accuracy chart
+---
+
+## Results
+The model predicts whether a news article is fake or real based on the text input provided by the user.
+
+---
+
+## Live Demo
+(Add your deployed Streamlit link here)
+
+---
+
+## Future Improvements
+- Improve model accuracy
+- Add more datasets
+- Add visualization dashboard
+- Deploy on cloud
+
+---
+
+## Author
+Ankita
